@@ -1,0 +1,478 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-image: url("images.jpeg");
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 20px;
+  color: white;
+  min-height: 100vh;
+}
+
+.main-card {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.2);
+  min-height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.store-name {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #64ffda;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+.hero p {
+  font-size: 1.1em;
+  margin-bottom: 15px;
+}
+
+.button {
+  height: 37px;
+  width: 120px;
+  border-radius: 20px;
+  background-image: linear-gradient(to right, #009, #000, #0021);
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-image 0.3s ease;
+}
+.button a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  line-height: 37px;
+}
+.button:hover {
+  background-image: linear-gradient(#005, #000, #009);
+}
+
+.products-section {
+  margin-bottom: 100px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+
+.products-section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.5em;
+  color: #64ffda;
+}
+
+.slider-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.product-slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.sell {
+  min-width: 220px;
+  width: 220px; /* تم تثبيت العرض هنا لضمان تناسق السلايدر */
+  flex-shrink: 0;
+  margin: 0 10px;
+  background-color: darkblue;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sell .img { /* استهداف الصورة داخل .sell */
+  width: 200px; /* تم تثبيت عرض الصورة */
+  height: 200px; /* تم تثبيت ارتفاع الصورة */
+  border-radius: 15px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.button2 {
+  background-image: linear-gradient(to left, #c3a3a5, #0002);
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 8px 20px;
+  margin-top: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-image 0.3s ease;
+}
+.button2:hover {
+  background-image: linear-gradient(#005, #000, #009);
+}
+
+.slider-button {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 2em;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.slider-button.prev {
+  left: 0;
+}
+
+.slider-button.next {
+  right: 0;
+}
+
+.slider-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.info-section {
+  margin-bottom: 100px;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-left: 5px solid #64ffda;
+  border-radius: 12px;
+}
+
+.info-section h3 {
+  font-size: 2em;
+  margin-bottom: 15px;
+  color: #64ffda;
+}
+.info-section p {
+    font-size: 1.05em;
+    line-height: 1.6;
+    margin-bottom: 1em;
+}
+
+.contact-social-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 80px;
+  padding: 30px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.form-card-container {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  margin-right: 20px;
+}
+
+.social-media-container {
+  flex: 1;
+  min-width: 250px;
+  max-width: 400px;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.social-media-container h3 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #64ffda;
+}
+
+.social-links-wrapper {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: #005;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-link i {
+  font-size: 2em;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.social-link-github:hover {
+    background-color: #f5f5f5;
+}
+.social-link-github:hover i {
+    color: #333;
+}
+
+.social-link-twitter:hover {
+    background-color: #fff;
+}
+.social-link-twitter:hover i {
+    color: #1DA1F2;
+}
+
+.social-link-telegram:hover {
+    background-color: #fff;
+}
+.social-link-telegram:hover i {
+    color: #0088cc;
+}
+
+.social-link-linkedin:hover {
+    background-color: #fff;
+}
+.social-link-linkedin:hover i {
+    color: #0077B5;
+}
+
+.social-link-google:hover {
+    background-color: #fff;
+}
+.social-link-google:hover i {
+    color: #DB4437;
+}
+
+.social-link-facebook:hover {
+    background-color: #fff;
+}
+.social-link-facebook:hover i {
+    color: #1877F2;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  font-family: inherit;
+  gap: 10px;
+  padding: 2em;
+  background-color: #171717;
+  border-radius: 20px;
+  width: 100%;
+}
+
+.form-heading {
+  text-align: center;
+  margin: 1em 0 2em 0;
+  color: #fff;
+  font-size: 1.5em;
+  background-color: transparent;
+  align-self: center;
+}
+
+.form-field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  border-radius: 10px;
+  padding: 0.8em;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: #171717;
+  box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+}
+
+.input-field {
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  color: #ccd6f6;
+  padding-inline: 1em;
+  font-size: 1em;
+}
+
+.sendMessage-btn {
+  cursor: pointer;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding: 1em;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #fff;
+  font-weight: bold;
+  outline: 1px solid gray;
+  transition: all ease-in-out 0.3s;
+}
+
+.sendMessage-btn:hover {
+  background-color: #64ffda;
+  color: #171717;
+  box-shadow: 0px 0px 20px 1px rgba(100, 255, 218, 0.4);
+}
+
+.form-card1 {
+  background-image: linear-gradient(163deg, #64ffda 0%, #64ffda 100%);
+  border-radius: 22px;
+  transition: all 0.3s;
+  margin-bottom: 20px;
+}
+
+.form-card1:hover {
+  box-shadow: 0px 0px 30px 1px rgba(100, 255, 218, 0.3);
+}
+
+.form-card2 {
+  border-radius: 20px;
+  transition: all 0.2s;
+}
+
+.form-card2:hover {
+  transform: scale(0.98);
+}
+
+@media (max-width: 900px) {
+  .contact-social-footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .form-card-container,
+  .social-media-container {
+    max-width: 90%;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+
+  .social-links-wrapper {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-card {
+    padding: 15px;
+    margin: 20px auto;
+  }
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+  }
+  .hero h1 {
+    font-size: 2.5em;
+  }
+  .products-section h2 {
+    font-size: 2em;
+  }
+  .info-section h3 {
+    font-size: 1.8em;
+  }
+  .info-section p {
+    font-size: 0.9em;
+  }
+  .sell {
+    min-width: 180px;
+  }
+  .slider-button {
+    font-size: 1.5em;
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+  .main-card {
+    padding: 10px;
+  }
+  .hero h1 {
+    font-size: 2em;
+  }
+  .products-section h2 {
+    font-size: 1.8em;
+  }
+  .info-section h3 {
+    font-size: 1.5em;
+  }
+  .sell {
+    min-width: 180px;
+  }
+  .slider-button {
+    font-size: 1.5em;
+    padding: 8px 12px;
+  }
+}
