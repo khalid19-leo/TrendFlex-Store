@@ -476,3 +476,59 @@ nav ul li a:hover {
     padding: 8px 12px;
   }
 }
+
+/*animation */
+header {
+  animation: fadeDown 1s ease-in-out;
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.sell {
+  animation: popUp 1s ease-in-out;
+}
+
+@keyframes popUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} 
+
+
+
+
+.button {
+  transition: transform 0.3s ease;
+}
+.button:hover {
+  transform: scale(1.05) rotate(-1deg);
+} 
+
+.hero h1 {
+  animation: slideIn 1s ease forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+} 
